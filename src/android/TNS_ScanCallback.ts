@@ -95,7 +95,8 @@ export class TNS_ScanCallback extends android.bluetooth.le.ScanCallback {
         state: 'disconnected',
         advertisement: android.util.Base64.encodeToString(result.getScanRecord().getBytes(), android.util.Base64.NO_WRAP),
         manufacturerId: manufacturerId,
-        manufacturerData: manufacturerData
+        manufacturerData: manufacturerData,
+        rawAdvertisingData: advertisement
       };
       CLog(CLogTypes.info, `TNS_ScanCallback.onScanResult ---- payload: ${JSON.stringify(payload)}`);
       this.onPeripheralDiscovered && this.onPeripheralDiscovered(payload);

@@ -198,6 +198,10 @@ export interface Peripheral {
   manufacturerId?: number;
 
   manufacturerData?: ArrayBuffer;
+
+  rawAdvertisingData?: any;
+
+  advertisement?: any;
 }
 
 /**
